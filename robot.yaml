@@ -1,0 +1,9 @@
+version: 1.0
+name: Process Work Item
+tasks:
+  - name: Process Work Item
+    script: robot/main.py
+    work_items:
+      - name: Input Work Item
+        type: file
+        path: "orders.xlsx"
