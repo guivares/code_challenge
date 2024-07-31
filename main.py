@@ -66,6 +66,7 @@ import logging
 from RPA.Robocorp.WorkItems import WorkItems
 from RPA.Browser.Selenium import Selenium
 from apnews_functions import APNewsFresh
+from config import LINK_APNEWS
 
 def main():
     logging.basicConfig(level=logging.INFO)
@@ -77,7 +78,7 @@ def main():
 
     browser = Selenium()
     logging.info("Define browser variable")
-    browser.open_chrome_browser()
+    browser.open_chrome_browser(LINK_APNEWS)
     logging.info(f"Open chrome for automation")
     
     try:
