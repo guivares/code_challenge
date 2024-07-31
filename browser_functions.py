@@ -33,6 +33,7 @@
 import re
 import logging
 from RPA.Browser.Selenium import Selenium
+from config import PATH_GECKODRIVER
 
 logging.basicConfig(level=logging.INFO)
 
@@ -42,21 +43,20 @@ def open_link(link):
     # Inicializa o Selenium
     browser = Selenium()
 
-    # Configura o navegador Chrome
+    # Configura o navegador Firefox
     browser.open_available_browser(
         url=link,
         headless=True,  # Executa o navegador em modo headless
         options={
-            'chrome': {
-                'arguments': [
-                    '--window-size=1920,1080',  # Define o tamanho da janela
-                    '--disable-gpu',            # Desativa o uso da GPU
-                    '--no-sandbox',              # Desativa o sandboxing
-                    '--disable-dev-shm-usage',  # Desativa o uso do /dev/shm
-                    '--disable-web-security',   # Desativa a segurança web
-                    '--allow-running-insecure-content'  # Permite conteúdo inseguro
-                ]
-            }
+            'arguments': [
+                '--window-size=1920,1080',  # Define o tamanho da janela
+                '--disable-gpu',            # Desativa o uso da GPU
+                '--no-sandbox',              # Desativa o sandboxing
+                '--disable-dev-shm-usage',  # Desativa o uso do /dev/shm
+                '--disable-web-security',   # Desativa a segurança web
+                '--allow-running-insecure-content'  # Permite conteúdo inseguro
+            ],
+            'binary_location': PATH_GECKODRIVER  # Substitua pelo caminho correto do Firefox se necessário
         }
     )
 
