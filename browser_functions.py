@@ -8,8 +8,9 @@ logging.basicConfig(level=logging.INFO)
 def open_link(link):
     logging.info("Opening browser")
     browser = Selenium()
-    browser.open_available_browser(link, headless=True)
-    browser.set_browser_window_size(1920, 1080)
+    browser.open_available_browser(link, headless=True, options={
+        "args": ["--window-size=1920,1080"]
+    })
     logging.info(f"Opened link: {link}")
     return browser
 
