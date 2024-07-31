@@ -10,4 +10,5 @@ dependencies:
       - selenium
       - robotframework
       - robotframework-seleniumlibrary
-      - rpaframework
+      - robocorp
+      - robocorp.tasks
