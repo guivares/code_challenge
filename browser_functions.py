@@ -45,8 +45,7 @@ def open_link(link):
     # Configura o navegador Chrome
     browser.open_available_browser(
         url=link,
-        browser='chrome',  # Define o navegador como Chrome
-        headless=True,     # Executa o navegador em modo headless
+        headless=True,  # Executa o navegador em modo headless
         options={
             'chrome': {
                 'arguments': [
