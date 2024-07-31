@@ -1,6 +1,4 @@
 from RPA.Robocorp.WorkItems import WorkItems
-from RPA.Robocorp.Process import Process
-from robocorp.tasks import task
 import logging
 import os
 from apnews_functions import APNewsFresh
@@ -9,7 +7,6 @@ from browser_functions import open_link
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 
-@task
 def process_work_item():
     # Cria uma instância do WorkItems
     workitems = WorkItems()
@@ -60,6 +57,7 @@ def process_work_item():
 
 if __name__ == "__main__":
     process_work_item()
+
 
 
 # from RPA.Robocorp.WorkItems import WorkItems
