@@ -1,8 +1,5 @@
 {
   "payload": {
       "search_phrase": "war"
-  },
-  "files": {
-      "orders.xlsx": "output/orders.xlsx"
   }
 }

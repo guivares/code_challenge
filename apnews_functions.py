@@ -18,7 +18,7 @@ class APNewsFresh:
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(driver, 30)
-        self.download_folder = "output"
+        self.download_folder = "artifacts"
         self.excel_file = "output.xlsx"
 
         if not os.path.exists(self.download_folder):
@@ -136,6 +136,6 @@ class APNewsFresh:
             return ""
 
     def save_excel(self):
-        output_path = os.path.join("output", self.excel_file)
+        output_path = os.path.join("artifacts", self.excel_file)
         self.workbook.save(output_path)
         logging.info(f"Excel file saved as {output_path}")

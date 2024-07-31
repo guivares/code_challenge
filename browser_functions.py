@@ -12,7 +12,7 @@ def open_link(link):
     logging.info("Opening browser")
     service = Service(executable_path=PATH_GECKODRIVER)
     firefox_options = Options()
-    
+    firefox_options.add_argument('--headless')
     driver = webdriver.Firefox(service=service, options=firefox_options)
     time.sleep(5)
     driver.get(link)
