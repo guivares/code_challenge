@@ -1,0 +1,41 @@
+1722354161881	geckodriver	INFO	Listening on 127.0.0.1:53824
+1722354164961	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53825" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\BRUNOG~1\\AppData\\Local\\Temp\\rust_mozprofileXzL0Gq"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1722354165157	Marionette	INFO	Marionette enabled
+1722354165281	Marionette	INFO	Listening on port 53857
+WebDriver BiDi listening on ws://127.0.0.1:53825
+Read port: 53857
+1722354165399	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:53825/devtools/browser/76dd800a-6e31-41e2-bf69-8f7b5469a8c5
+JavaScript warning: https://pagead2.googlesyndication.com/bg/RsNAVCFp5OyOFRtu4hJUeFhTMEfeQCZyl9LPFbgII8Y.js line 2 > eval line 3717 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.youtube.com/s/player/0e90208b/player_ias.vflset/en_US/base.js, line 8198: Script terminated by timeout at:
+g.k.publish@https://www.youtube.com/s/player/0e90208b/player_ias.vflset/en_US/base.js:8198:108
+g.Mx.prototype.publish@https://www.youtube.com/s/player/0e90208b/player_ias.vflset/en_US/base.js:8425:74
+g.k.sendAbandonmentPing@https://www.youtube.com/s/player/0e90208b/player_ias.vflset/en_US/base.js:12262:74
+g.k.sendAbandonmentPing@https://www.youtube.com/s/player/0e90208b/player_ias.vflset/en_US/base.js:10178:62
+nR/a.state.B[b]@https://www.youtube.com/s/player/0e90208b/player_ias.vflset/en_US/base.js:4482:53
+dy/<@https://www.youtube.com/s/player/0e90208b/www-embed-player.vflset/www-embed-player.js:1857:106
+py@https://www.youtube.com/s/player/0e90208b/www-embed-player.vflset/www-embed-player.js:1893:46
+@https://www.youtube.com/s/player/0e90208b/www-embed-player.vflset/www-embed-player.js:1901:137
+ul/<@https://www.youtube.com/s/player/0e90208b/www-embed-player.vflset/www-embed-player.js:888:63
+
+JavaScript warning: https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015, line 1: Script terminated by timeout at:
+o@https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015:1:16957
+104/e.onINP/</<@https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015:1:17547
+t@https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015:1:11507
+
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://cdn.browsiprod.com/sd/apps/middy/middy-desktop-4.25.21.js, line 1: TypeError: window.adblockDetector is undefined
+JavaScript error: https://assets.apnews.com/resource/00000188-2a81-d28a-a1fd-7bfb6ccb0000/styles/default/All.min.c0e91e4a47c80b296e67d3501e22d103.gz.js, line 2: Error: error
+JavaScript warning: https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015, line 1: Script terminated by timeout at:
+o@https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015:1:18291
+104/e.onLCP/</c<@https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015:1:18393
+104/T/<@https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015:1:11636
+t@https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015:1:11507
+
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
