@@ -1,16 +1,13 @@
 import re
 import logging
 from RPA.Browser.Selenium import Selenium
-from RPA.FileSystem import FileSystem
 
 logging.basicConfig(level=logging.INFO)
 
 def open_link(link):
     logging.info("Opening browser")
     browser = Selenium()
-    browser.open_available_browser(link, headless=True, options={
-        "arguments": ["--window-size=1920,1080"]
-    })
+    browser.open_available_browser(link, headless=True, options=["--window-size=1920,1080"])
     logging.info(f"Opened link: {link}")
     return browser
 
