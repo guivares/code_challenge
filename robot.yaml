@@ -1,3 +1,4 @@
 tasks:
   Run AP News Bot:
     shell: python3 main.py
+artifactsDir: artifacts/
