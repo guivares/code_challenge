@@ -64,6 +64,7 @@ def open_link(link):
     return browser
 
 
+
 def contains_currency(search_phrase):
     patterns = [
         r'\$\d+(?:\.\d{1,2})?',             # $11.1 or $111.11

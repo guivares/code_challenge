@@ -66,7 +66,6 @@ import logging
 from RPA.Robocorp.WorkItems import WorkItems
 from RPA.Browser.Selenium import Selenium
 from apnews_functions import APNewsFresh
-from config import LINK_APNEWS
 
 def main():
     logging.basicConfig(level=logging.INFO)
@@ -76,11 +75,12 @@ def main():
     search_phrase = work_items.get_work_item_variable("payload").get("search_phrase", "Default Search Phrase")
     logging.info(f"Search phrase: {search_phrase}")
 
+    # Inicializa o Selenium
     browser = Selenium()
-    logging.info("Define browser variable")
-    browser.open_chrome_browser(LINK_APNEWS)
-    logging.info(f"Open chrome for automation")
     
+    # Abre o navegador Chrome com o link fornecido
+    open_link("https://apnews.com")
+
     try:
         apnews = APNewsFresh(browser)
         logging.info("Opening browser")
@@ -92,8 +92,9 @@ def main():
     finally:
         browser.close_browser()
 
+    # Salva e libera o item de trabalho
     work_items.save_work_item()
-    work_items.release_input_work_item()
+    work_items.release_input_work_item(state="processed")  # Passa o estado correto
 
 if __name__ == "__main__":
     main()
