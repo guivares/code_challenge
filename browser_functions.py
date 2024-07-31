@@ -42,10 +42,11 @@ def open_link(link):
     # Inicializa o Selenium
     browser = Selenium()
 
-    # Abre o navegador Chrome com o link fornecido
-    browser.open_chrome_browser(
+    # Configura o navegador Chrome
+    browser.open_available_browser(
         url=link,
-        headless=True,  # Define como True para rodar em modo headless
+        browser='chrome',  # Define o navegador como Chrome
+        headless=True,     # Executa o navegador em modo headless
         options={
             'chrome': {
                 'arguments': [
