@@ -10,5 +10,4 @@ dependencies:
       - selenium
       - robotframework
       - robotframework-seleniumlibrary
-      - robocorp
-      - robocorp.tasks
+      - rpaframework  # Adicione esta linha
