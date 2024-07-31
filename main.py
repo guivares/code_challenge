@@ -76,7 +76,9 @@ def main():
     logging.info(f"Search phrase: {search_phrase}")
 
     browser = Selenium()
+    logging.info("Define browser variable")
     browser.open_chrome_browser()
+    logging.info(f"Open chrome for automation")
     
     try:
         apnews = APNewsFresh(browser)

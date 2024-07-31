@@ -42,17 +42,20 @@ def open_link(link):
     # Inicializa o Selenium
     browser = Selenium()
 
-    # Define o caminho do geckodriver (substitua pelo caminho correto)
-    geckodriver_path = '/path/to/geckodriver'
-
-    # Configura o navegador Firefox
-    browser.open_available_browser(
-        link,
-        browser='firefox',
+    # Abre o navegador Chrome com o link fornecido
+    browser.open_chrome_browser(
+        url=link,
+        headless=True,  # Define como True para rodar em modo headless
         options={
-            'firefox': {
-                'geckodriver': geckodriver_path,
-                'headless': True
+            'chrome': {
+                'arguments': [
+                    '--window-size=1920,1080',  # Define o tamanho da janela
+                    '--disable-gpu',            # Desativa o uso da GPU
+                    '--no-sandbox',              # Desativa o sandboxing
+                    '--disable-dev-shm-usage',  # Desativa o uso do /dev/shm
+                    '--disable-web-security',   # Desativa a segurança web
+                    '--allow-running-insecure-content'  # Permite conteúdo inseguro
+                ]
             }
         }
     )
