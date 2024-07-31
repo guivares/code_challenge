@@ -10,3 +10,4 @@ dependencies:
       - selenium
       - robotframework
       - robotframework-seleniumlibrary
+      - rpaframework
