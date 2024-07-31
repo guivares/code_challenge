@@ -159,7 +159,7 @@ class APNewsFresh:
         self.download_folder = "output"
         self.excel_file = "output.xlsx"
 
-        if not self.fs.directory_exists(self.download_folder):
+        if not self.fs.directory_should_exist(self.download_folder):
             self.fs.create_directory(self.download_folder)
 
         self.workbook = Workbook()
