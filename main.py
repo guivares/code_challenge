@@ -10,6 +10,9 @@ logging.basicConfig(level=logging.INFO)
 def process_work_item():
     # Cria uma instância do WorkItems
     workitems = WorkItems()
+    
+    # Carrega os work items
+    workitems.get_input_work_item()
 
     # Verifica se há itens de trabalho na lista de inputs
     if not workitems.inputs:
@@ -57,6 +60,7 @@ def process_work_item():
 
 if __name__ == "__main__":
     process_work_item()
+
 
 
 
