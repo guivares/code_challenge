@@ -38,8 +38,18 @@ logging.basicConfig(level=logging.INFO)
 
 def open_link(link):
     logging.info("Opening browser")
+    
+    # Define o caminho do geckodriver
+    geckodriver_path = 'resources\geckodriver.exe'  # Substitua pelo caminho real do geckodriver
+
+    # Inicializa o navegador Firefox
     browser = Selenium()
-    browser.open_available_browser(link, headless=True, options=["--window-size=1920,1080"])
+    browser.open_available_browser(
+        link,
+        browser='firefox',
+        options=["--headless", f"--webdriver.gecko.driver={geckodriver_path}"]
+    )
+    
     logging.info(f"Opened link: {link}")
     return browser
 
