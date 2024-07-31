@@ -9,7 +9,7 @@ def open_link(link):
     logging.info("Opening browser")
     browser = Selenium()
     browser.open_available_browser(link, headless=True, options={
-        "args": ["--window-size=1920,1080"]
+        "arguments": ["--window-size=1920,1080"]
     })
     logging.info(f"Opened link: {link}")
     return browser
