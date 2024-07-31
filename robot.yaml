@@ -1,6 +1,6 @@
 robot:
   tasks:
     Run AP News Bot:
-      shell: python3 main.py
+      shell: python main.py
   artifactsDir: artifacts/
   condaConfigFile: conda.yaml
