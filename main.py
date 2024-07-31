@@ -1,6 +1,5 @@
 from RPA.Robocorp.WorkItems import WorkItems
 import logging
-import os
 from apnews_functions import APNewsFresh
 from browser_functions import open_link
 
@@ -31,15 +30,6 @@ def process_work_item():
             search_phrase = item.payload.get("search_phrase", "Default Search Phrase")
             logging.info(f"Search phrase: {search_phrase}")
             
-            files = item.files
-            logging.info(f"Files: {files}")
-
-            # Verifica se o arquivo 'orders.xlsx' está presente
-            orders_file_path = files.get("orders.xlsx")
-            if orders_file_path:
-                logging.info(f"Processing file: {orders_file_path}")
-                # Processar arquivo orders.xlsx se necessário
-
             # Configura o driver e instancia a classe APNewsFresh
             driver = open_link("https://apnews.com")  # Use o link apropriado aqui
             ap_news = APNewsFresh(driver)
@@ -63,11 +53,13 @@ def process_work_item():
         except Exception as e:
             # Marca o item como falhado em caso de erro
             logging.error(f"Error processing item: {e}")
-            item.fail(message=str(e))
+            # Atualizar status manualmente se `fail` não estiver disponível
+            item.payload['status'] = 'failed'
+            item.payload['error_message'] = str(e)
+            item.save()
 
 if __name__ == "__main__":
     process_work_item()
-
 
 
 
