@@ -69,6 +69,7 @@ def main():
 
     # Usa o primeiro item da lista de inputs
     item = workitems.inputs[0]
+    logging.info(f"Processing file: {item}")
     
     search_phrase = item.payload.get("search_phrase", "Default Search Phrase")
     files = item.files
