@@ -66,6 +66,8 @@ import logging
 from RPA.Robocorp.WorkItems import WorkItems
 from RPA.Browser.Selenium import Selenium
 from apnews_functions import APNewsFresh
+from browser_functions import open_link  
+
 
 def main():
     logging.basicConfig(level=logging.INFO)
