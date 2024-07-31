@@ -48,8 +48,8 @@
 # if __name__ == "__main__":
 #     main()
 
-from robocorp import workitems
-from robocorp.tasks import task
+from RPA.Robocorp.WorkItems import WorkItems
+from RPA.Robocorp.Process import Process
 import logging
 import os
 from apnews_functions import APNewsFresh
@@ -58,12 +58,12 @@ from browser_functions import open_link
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 
-@task
-def handle_work_item():
+def main():
+    # Cria uma instância do WorkItems
+    workitems = WorkItems()
+
     # Obtém o item de trabalho atual
     item = workitems.inputs.current
-
-    # Acessa o payload do item de trabalho
     search_phrase = item.payload.get("search_phrase", "Default Search Phrase")
     files = item.files
 
@@ -83,4 +83,7 @@ def handle_work_item():
     driver.quit()
 
     # Cria um item de trabalho de saída com o resultado
-    workitems.outputs.create(payload={"status": "completed"})
+    workitems.outputs.create(payload={"status": "completed"}, files={"output.xlsx": "output/output.xlsx"})
+
+if __name__ == "__main__":
+    main()
