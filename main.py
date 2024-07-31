@@ -62,8 +62,14 @@ def main():
     # Cria uma instância do WorkItems
     workitems = WorkItems()
 
-    # Obtém o item de trabalho atual
-    item = workitems.inputs.current
+    # Obtém o primeiro item de trabalho da lista
+    if not workitems.inputs:
+        logging.error("No input work items found.")
+        return
+
+    # Usa o primeiro item da lista de inputs
+    item = workitems.inputs[0]
+    
     search_phrase = item.payload.get("search_phrase", "Default Search Phrase")
     files = item.files
 
